@@ -332,7 +332,7 @@ body {
 
 .profile-container {
   width: 400px;
-  height: 400px;
+  height: 500px;
   position: relative;
 }
 
@@ -345,10 +345,10 @@ body {
   z-index: 2;
   border: 3px solid transparent;
   background: var(--primary-gradient) border-box;
-  mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+  /* mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
   -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
-  mask-composite: exclude;
+  mask-composite: exclude; */
 }
 
 .profile-image img {
