@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Mohamed Tarek — Full-Stack & Back-End Developer</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+<link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+<!-- Loading Screen -->
+<div class="loader" id="loader">
+  <div class="loader-circle"></div>
+</div>
+
+<!-- Particles Background -->
+<div id="particles-js"></div>
+
+<!-- Navigation -->
+<nav class="navbar" id="navbar">
+  <div class="nav-container">
+    <a href="#" class="logo">
+      <i class="fas fa-code"></i>MT
+    </a>
+    
+    <button class="hamburger" id="hamburger">
+      <i class="fas fa-bars"></i>
+    </button>
+    
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#hero" class="active">Home</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#timeline">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section id="hero">
+  <div class="hero-container">
+    <div class="hero-content" data-aos="fade-right" data-aos-duration="1000">
+      <h1 class="glitch-text">Mohamed Tarek</h1>
+      <p class="hero-subtitle">Building the future of web applications with cutting-edge technology and elegant solutions.</p>
+      
+      <div class="hero-badges">
+        <div class="badge">
+          <i class="fas fa-code"></i>
+          Full-Stack Developer
+        </div>
+        <div class="badge">
+          <i class="fas fa-server"></i>
+          Back-End Specialist
+        </div>
+        <div class="badge">
+          <i class="fas fa-rocket"></i>
+          Tech Innovator
+        </div>
+      </div>
+      
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-primary">
+          <i class="fas fa-rocket"></i>
+          View Projects
+        </a>
+        <a href="#contact" class="btn btn-secondary">
+          <i class="fas fa-paper-plane"></i>
+          Hire Me
+        </a>
+      </div>
+    </div>
+    
+    <div class="hero-visual" data-aos="fade-left" data-aos-duration="1000">
+      <div class="profile-container">
+        <div class="profile-image">
+          <img src="./Mohamed%20Tarek%20_%20Web%20Development%20Head%20_%20Back-End%20Head.jpg"  alt="Mohamed Tarek">
+        </div>
+        <div class="floating-shapes">
+          <div class="shape"></div>
+          <div class="shape"></div>
+          <div class="shape"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Skills Section -->
+<section id="skills">
+  <div class="skills-container">
+    <div class="section-header" data-aos="fade-up">
+      <h2>Technical Expertise</h2>
+      <p class="subtitle">Mastering a diverse tech stack to deliver exceptional solutions</p>
+    </div>
+    
+    <div class="skills-category" data-aos="fade-up">
+      <h3 class="category-title">
+        <i class="fas fa-code"></i>
+        Programming Languages
+      </h3>
+      <div class="skills-grid">
+        <div class="skill-card" data-aos="zoom-in">
+          <div class="skill-icon">
+            <i class="fab fa-php" style="color: #777BB3;"></i>
+          </div>
+          <h3>PHP</h3>
+          <p>Advanced OOP, design patterns, and high-performance applications</p>
+          <div class="skill-level">
+            <div class="level-bar">
+              <div class="level-fill" style="width: 100%"></div>
+            </div>
+            <span class="level-percent"></span>
+          </div>
+        </div>
+        
+        <div class="skill-card" data-aos="zoom-in" data-aos-delay="100">
+          <div class="skill-icon">
+            <i class="fab fa-js-square" style="color: #F7DF1E;"></i>
+          </div>
+          <h3>JavaScript</h3>
+          <p>ES6+ and modern frontend frameworks</p>
+          <div class="skill-level">
+            <div class="level-bar">
+              <div class="level-fill" style="width: 100%"></div>
+            </div>
+            <span class="level-percent"></span>
+          </div>
+        </div>
+        
+        <div class="skill-card" data-aos="zoom-in" data-aos-delay="200">
+          <div class="skill-icon">
+            <i class="fab fa-microsoft" style="color: #512BD4;"></i>
+          </div>
+          <h3>C#</h3>
+          <p>Advanced OOP, design patterns, and high-performance applications</p>
+          <div class="skill-level">
+            <div class="level-bar">
+              <div class="level-fill" style="width: 100%"></div>
+            </div>
+            <span class="level-percent"></span>
+          </div>
+        </div>
+        
+        <div class="skill-card" data-aos="zoom-in" data-aos-delay="300">
+          <div class="skill-icon">
+            <i class="fas fa-code" style="color: #3178C6;"></i>
+          </div>
+          <h3>TypeScript</h3>
+          <p>Type-safe development with modern ES6+ features</p>
+          <div class="skill-level">
+            <div class="level-bar">
+              <div class="level-fill" style="width: 100%"></div>
+            </div>
+            <span class="level-percent"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="skills-category" data-aos="fade-up">
+      <h3 class="category-title">
+        <i class="fas fa-layer-group"></i>
+        Frameworks & Libraries
+      </h3>
+      <div class="skills-grid">
+        <div class="skill-card" data-aos="zoom-in">
+          <div class="skill-icon">
+            <i class="fab fa-laravel" style="color: #FF2D20;"></i>
+          </div>
+          <h3>Laravel</h3>
+          <p>Expert in Laravel framework and its ecosystem</p>
+          <div class="skill-level">
+            <div class="level-bar">
+              <div class="level-fill" style="width: 100%"></div>
+            </div>
+            <span class="level-percent"></span>
+          </div>
+        </div>
+        
+        <!-- ASP.NET Core -->
+        <div class="skill-card" data-aos="zoom-in" data-aos-delay="100">
+          <div class="skill-icon">
+            <i class="fab fa-microsoft" style="color: #DD0031;"></i>
+          </div>
+          <h3>ASP.NET Core</h3>
+          <p>Expert in ASP.NET Core and its ecosystem</p>
+          <div class="skill-level">
+            <div class="level-bar">
+              <div class="level-fill" style="width: 100%"></div>
+            </div>
+            <span class="level-percent"></span>
+          </div>
+        </div>
+
+        <div class="skill-card" data-aos="zoom-in" data-aos-delay="100">
+          <div class="skill-icon">
+            <i class="fab fa-angular" style="color: #DD0031;"></i>
+          </div>
+          <h3>Angular</h3>
+          <p>Component-based architecture and RxJS</p>
+          <div class="skill-level">
+            <div class="level-bar">
+              <div class="level-fill" style="width: 100%"></div>
+            </div>
+            <span class="level-percent"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="skills-category" data-aos="fade-up">
+      <h3 class="category-title">
+        <i class="fas fa-database"></i>
+        Databases & Tools
+      </h3>
+      <div class="skills-grid">
+        <div class="skill-card" data-aos="zoom-in">
+          <div class="skill-icon">
+            <i class="fas fa-database" style="color: #00758F;"></i>
+          </div>
+          <h3>MySQL</h3>
+          <p>Database design, optimization, and administration</p>
+          <div class="skill-level">
+            <div class="level-bar">
+              <div class="level-fill" style="width: 100%"></div>
+            </div>
+            <span class="level-percent"></span>
+          </div>
+        </div>
+        
+        <div class="skill-card" data-aos="zoom-in" data-aos-delay="100">
+          <div class="skill-icon">
+            <i class="fas fa-server" style="color: #00BCF2;"></i>
+          </div>
+          <h3>SQL Server</h3>
+          <p>T-SQL, stored procedures, and performance tuning</p>
+          <div class="skill-level">
+            <div class="level-bar">
+              <div class="level-fill" style="width: 100%"></div>
+            </div>
+            <span class="level-percent"></span>
+          </div>
+        </div>
+        
+        <div class="skill-card" data-aos="zoom-in" data-aos-delay="200">
+          <div class="skill-icon">
+            <i class="fas fa-code-branch" style="color: #F05032;"></i>
+          </div>
+          <h3>REST APIs</h3>
+          <p>Designing secure and scalable RESTful APIs</p>
+          <div class="skill-level">
+            <div class="level-bar">
+              <div class="level-fill" style="width: 100%"></div>
+            </div>
+            <span class="level-percent"></span>
+          </div>
+        </div>
+        
+        <div class="skill-card" data-aos="zoom-in" data-aos-delay="300">
+          <div class="skill-icon">
+            <i class="fab fa-git-alt" style="color: #F05032;"></i>
+          </div>
+          <h3>Git & GitHub</h3>
+          <p>Version control and collaborative development</p>
+          <div class="skill-level">
+            <div class="level-bar">
+              <div class="level-fill" style="width: 100%"></div>
+            </div>
+            <span class="level-percent"></span>
+          </div>
+        </div>
+      
+        
+    </div>
+  </div>
+</section>
+<!-- Add this section after the Skills section -->
+<section id="integrations">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <h2>API Integrations & Tools</h2>
+      <p class="subtitle">Seamlessly integrating cutting-edge services into applications</p>
+    </div>
+    
+    <div class="integrations-grid">
+      <div class="integration-card" data-aos="fade-up">
+        <div class="integration-icon stripe">
+          <i class="fab fa-stripe"></i>
+        </div>
+        <h3>Stripe</h3>
+        <p>Payment processing, subscription management, and financial APIs</p>
+        <ul class="integration-features">
+          <li>Payment gateway setup</li>
+          <li>Recurring billing</li>
+          <li>Invoice automation</li>
+          <li>Webhook handling</li>
+        </ul>
+      </div>
+      
+      <div class="integration-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="integration-icon gemini">
+          <i class="fas fa-robot"></i>
+        </div>
+        <h3>Gemini AI</h3>
+        <p>AI-powered features, chatbots, and intelligent automation</p>
+        <ul class="integration-features">
+          <li>Chatbot integration</li>
+          <li>Content generation</li>
+          <li>Image analysis</li>
+          <li>Predictive features</li>
+        </ul>
+      </div>
+      
+      <div class="integration-card" data-aos="fade-up" data-aos-delay="200">
+        <div class="integration-icon redis">
+          <i class="fas fa-bolt"></i>
+        </div>
+        <h3>Redis</h3>
+        <p>High-performance caching and real-time data management</p>
+        <ul class="integration-features">
+          <li>Session caching</li>
+          <li>Database query caching</li>
+          <li>Real-time notifications</li>
+          <li>Rate limiting</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Experience Timeline -->
+<section id="timeline">
+  <div class="timeline-container">
+    <div class="section-header" data-aos="fade-up">
+      <h2>Career Journey</h2>
+      <p class="subtitle">My professional evolution in the tech industry</p>
+    </div>
+    
+    <div class="timeline">
+      <div class="timeline-item" data-aos="fade-right">
+        <div class="timeline-marker">
+          <i class="fas fa-chalkboard-teacher"></i>
+        </div>
+        <div class="timeline-content">
+          <span class="timeline-date">2024</span>
+          <h3><i class="fas fa-chalkboard-teacher"></i> Back-End Development Instructor</h3>
+          <p>Leading the backend architecture, building secure APIs, managing engineering teams, and optimizing system performance. Reduced API response time by 40% through optimization strategies.</p>
+        </div>
+      </div>
+      
+      <div class="timeline-item" data-aos="fade-left">
+        <div class="timeline-marker">
+          <i class="fas fa-laptop-code"></i>
+        </div>
+        <div class="timeline-content">
+          <span class="timeline-date">2025</span>
+          <h3><i class="fas fa-laptop-code"></i> Full-Stack Developer</h3>
+          <p>Delivered comprehensive systems for startups including booking apps, ERPs, delivery systems, and admin dashboards. Successfully collaborated with 20+ clients across diverse industries.</p>
+        </div>
+      </div>
+      
+      <div class="timeline-item" data-aos="fade-right">
+        <div class="timeline-marker">
+          <i class="fas fa-crown"></i>
+        </div>
+        <div class="timeline-content">
+          <span class="timeline-date">2026</span>
+          <h3><i class="fas fa-crown"></i> Web Development Head</h3>
+          <p>Supervised full-stack development teams, building sophisticated dashboards, portals, and scalable web platforms. Successfully delivered 15+ major projects with teams of 5-10 developers.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Projects Section -->
+<section id="projects">
+  <div class="projects-container">
+    <div class="section-header" data-aos="fade-up">
+      <h2>Featured Projects</h2>
+      <p class="subtitle">Innovative solutions that demonstrate technical excellence</p>
+    </div>
+    
+    <div class="projects-grid">
+      <div class="project-card" data-aos="zoom-in">
+        <div class="project-image">
+          <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Online Booking System">
+          <div class="project-badge">Live</div>
+        </div>
+        <div class="project-content">
+          <h3><i class="fas fa-calendar-check"></i> Enin Booking System</h3>
+          <p>A comprehensive platform for booking tours and managing reservations with real-time availability, integrated payment processing, and an advanced admin dashboard.</p>
+          <div class="project-tech">
+            <span class="tech-tag"><i class="fab fa-php"></i> PHP</span>
+            
+            <span class="tech-tag"><i class="fas fa-database"></i> MySQL</span>
+            <span class="tech-tag"><i class="fab fa-stripe"></i> Stripe API</span>
+          </div>
+           <br>
+          <div class="project-links">
+            <a href="https://eninbookings.nl/" class="project-link">
+              <i class="fas fa-external-link-alt"></i>
+              Live Site
+            </a>
+       
+          </div>
+        </div>
+      </div>
+      
+      <div class="project-card" data-aos="zoom-in" data-aos-delay="100">
+        <div class="project-image">
+          <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Job Portal">
+          <div class="project-badge">Completed</div>
+        </div>
+        <div class="project-content">
+          <h3><i class="fas fa-briefcase"></i> Job Portal</h3>
+          <p>Advanced web application for job listings and applications with sophisticated filtering, resume parsing technology, and comprehensive employer/recruiter dashboards.</p>
+          <div class="project-tech">
+            <span class="tech-tag"><i class="fab fa-js-square"></i> JavaScript</span>
+            <span class="tech-tag"><i class="fab fa-microsoft"></i> Laravel</span>
+            <span class="tech-tag"><i class="fas fa-server"></i> MySQL</span>
+ 
+          </div>
+           <br>
+          <div class="project-links">
+            
+            <a href="#" class="project-link">
+              <i class="fab fa-github"></i>
+              Code
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card" data-aos="zoom-in" data-aos-delay="100">
+        <div class="project-image">
+          <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Job Portal">
+          <div class="project-badge">Completed</div>
+        </div>
+        <div class="project-content">
+          <h3><i class="fas fa-briefcase"></i> Food Delivery API</h3>
+          <p>Advanced web application for job listings and applications with sophisticated filtering, resume parsing technology, and comprehensive employer/recruiter dashboards.</p>
+          <div class="project-tech">
+            <span class="tech-tag"><i class="fab fa-angular"></i> Angular</span>
+            <span class="tech-tag"><i class="fab fa-microsoft"></i> ASP.NET Core</span>
+            <span class="tech-tag"><i class="fas fa-server"></i> SQL Server</span>
+                  <span class="tech-tag"><i class="fab fa-stripe"></i> Stripe</span>
+
+             <span class="tech-tag"><i class="fas fa-bolt"></i> Redis</span>
+            
+          </div>
+         
+          <div class="project-links">
+          
+            <a href="#" class="project-link">
+              <i class="fab fa-github"></i>
+              Code
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="project-card" data-aos="zoom-in" data-aos-delay="200">
+        <div class="project-image">
+          <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="DropShipping Platform">
+          <div class="project-badge">Completed</div>
+        </div>
+        <div class="project-content">
+          <h3><i class="fas fa-shipping-fast"></i> DropShipping Platform</h3>
+          <p>Comprehensive dashboard for managing orders, products, and shipments with supplier integration, real-time inventory management, and advanced analytics.</p>
+          <div class="project-tech">
+            <span class="tech-tag"><i class="fab fa-microsoft"></i> C# ASP.NET</span>
+            <span class="tech-tag"><i class="fas fa-code"></i> TypeScript</span>
+            <span class="tech-tag"><i class="fas fa-server"></i> SQL Server</span>
+            <span class="tech-tag"><i class="fas fa-code-branch"></i> REST API</span>
+          </div>
+          <div class="project-links">
+           
+            <a href="#" class="project-link">
+              <i class="fab fa-github"></i>
+              Code
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact">
+  <div class="contact-container">
+    <div class="contact-info" data-aos="fade-right">
+      <div class="contact-card">
+        <h3><i class="fas fa-envelope"></i> Get In Touch</h3>
+        <p>Have a project in mind? Let's discuss how we can work together to bring your ideas to life.</p>
+        <div class="contact-links">
+          <a href="mailto:mohamedtarekbadr047@gmail.com" class="contact-link">
+            <i class="fas fa-envelope"></i>
+            <span>mohamedtarekbadr047@gmail.com</span>
+          </a>
+          <a href="#" class="contact-link">
+            <i class="fas fa-phone"></i>
+            <span>+20 123 456 7890</span>
+          </a>
+          <a href="#" class="contact-link">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>Cairo, Egypt</span>
+          </a>
+        </div>
+        <div class="social-links">
+          <a href="#" class="social-link">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="#" class="social-link">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="#" class="social-link">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="#" class="social-link">
+            <i class="fab fa-stack-overflow"></i>
+          </a>
+        </div>
+      </div>
+      
+      <div class="contact-card">
+        <h3><i class="fas fa-briefcase"></i> Available For</h3>
+        <div class="contact-links">
+          <a href="#" class="contact-link">
+            <i class="fas fa-code"></i>
+            <span>Full-Stack Development</span>
+          </a>
+          <a href="#" class="contact-link">
+            <i class="fas fa-server"></i>
+            <span>Back-End Solutions</span>
+          </a>
+          <a href="#" class="contact-link">
+            <i class="fas fa-project-diagram"></i>
+            <span>System Architecture</span>
+          </a>
+          <a href="#" class="contact-link">
+            <i class="fas fa-chalkboard-teacher"></i>
+            <span>Technical Consulting</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="contact-form" data-aos="fade-left">
+      <form id="contactForm">
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" class="form-control" placeholder="Enter your name" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" class="form-control" placeholder="Enter your email" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" class="form-control" placeholder="Project or inquiry subject" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" class="form-control" placeholder="Tell me about your project..." required></textarea>
+        </div>
+        
+        <button type="submit" class="submit-btn">
+          <i class="fas fa-paper-plane"></i>
+          Send Message
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-content">
+    <div>
+      <div class="footer-logo">MT</div>
+      <p class="footer-text">Building innovative digital solutions with cutting-edge technology and exceptional user experiences.</p>
+    </div>
+    
+    <div class="footer-links">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="#hero"><i class="fas fa-chevron-right"></i> Home</a></li>
+        <li><a href="#skills"><i class="fas fa-chevron-right"></i> Skills</a></li>
+        <li><a href="#timeline"><i class="fas fa-chevron-right"></i> Experience</a></li>
+        <li><a href="#projects"><i class="fas fa-chevron-right"></i> Projects</a></li>
+        <li><a href="#contact"><i class="fas fa-chevron-right"></i> Contact</a></li>
+      </ul>
+    </div>
+    
+    <div class="footer-contact">
+      <h3>Contact Info</h3>
+      <p><i class="fas fa-envelope"></i> mohamedtarekbadr047@gmail.com</p>
+      <p><i class="fas fa-map-marker-alt"></i> Cairo, Egypt</p>
+      <p><i class="fas fa-clock"></i> Available for freelance work</p>
+    </div>
+  </div>
+  
+  <div class="copyright">
+    <p>© 2023 Mohamed Tarek. All rights reserved. Made with <span class="heart">❤</span></p>
+  </div>
+</footer>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+// Initialize AOS (Animate On Scroll)
+AOS.init({
+  duration: 1000,
+  once: true,
+  offset: 100
+});
+
+// Particles.js Configuration
+particlesJS("particles-js", {
+  particles: {
+    number: { 
+      value: 120,
+      density: { enable: true, value_area: 800 }
+    },
+    color: { value: ["#ff5e5e", "#ffb85e", "#6a11cb", "#2575fc"] },
+    shape: { type: "circle" },
+    opacity: { 
+      value: 0.6,
+      random: true,
+      anim: { enable: true, speed: 1, opacity_min: 0.1, sync: false }
+    },
+    size: { 
+      value: 3,
+      random: true,
+      anim: { enable: true, speed: 2, size_min: 0.1, sync: false }
+    },
+    line_linked: {
+      enable: true,
+      distance: 150,
+      color: "#ffb85e",
+      opacity: 0.2,
+      width: 1
+    },
+    move: {
+      enable: true,
+      speed: 1.5,
+      direction: "none",
+      random: true,
+      straight: false,
+      out_mode: "out",
+      bounce: false,
+      attract: { enable: false, rotateX: 600, rotateY: 1200 }
+    }
+  },
+  interactivity: {
+    detect_on: "canvas",
+    events: { 
+      onhover: { 
+        enable: true, 
+        mode: "grab",
+        parallax: { enable: true, force: 60, smooth: 10 }
+      },
+      onclick: { enable: true, mode: "push" },
+      resize: true
+    },
+    modes: { 
+      grab: { distance: 200, line_linked: { opacity: 0.5 } },
+      push: { particles_nb: 4 }
+    }
+  },
+  retina_detect: true
+});
+
+// DOM Ready
+document.addEventListener('DOMContentLoaded', function() {
+  // Hide loader
+  setTimeout(() => {
+    document.getElementById('loader').classList.add('hidden');
+  }, 1000);
+  
+  // Navbar scroll effect
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 100) {
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
+    }
+  });
+  
+  // Mobile menu toggle
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('navLinks');
+  
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+    hamburger.innerHTML = navLinks.classList.contains('active') 
+      ? '<i class="fas fa-times"></i>' 
+      : '<i class="fas fa-bars"></i>';
+  });
+  
+  // Close mobile menu when clicking a link
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('active');
+      hamburger.innerHTML = '<i class="fas fa-bars"></i>';
+    });
+  });
+  
+  // Active nav link based on scroll position
+  const sections = document.querySelectorAll('section');
+  const navItems = document.querySelectorAll('.nav-links a');
+  
+  window.addEventListener('scroll', () => {
+    let current = '';
+    
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop;
+      const sectionHeight = section.clientHeight;
+      
+      if (scrollY >= (sectionTop - 200)) {
+        current = section.getAttribute('id');
+      }
+    });
+    
+    navItems.forEach(item => {
+      item.classList.remove('active');
+      if (item.getAttribute('href') === `#${current}`) {
+        item.classList.add('active');
+      }
+    });
+  });
+  
+  // Form submission
+  const contactForm = document.getElementById('contactForm');
+  contactForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const submitBtn = this.querySelector('.submit-btn');
+    const originalText = submitBtn.innerHTML;
+    
+    // Show loading state
+    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+    submitBtn.disabled = true;
+    
+    // Simulate API call
+    setTimeout(() => {
+      alert('Thank you! Your message has been sent. I\'ll get back to you soon.');
+      contactForm.reset();
+      submitBtn.innerHTML = originalText;
+      submitBtn.disabled = false;
+    }, 2000);
+  });
+  
+  // Skill level animation on scroll
+  const skillCards = document.querySelectorAll('.skill-card');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const levelFill = entry.target.querySelector('.level-fill');
+        if (levelFill) {
+          const width = levelFill.style.width;
+          levelFill.style.width = '0%';
+          setTimeout(() => {
+            levelFill.style.width = width;
+            levelFill.style.transition = 'width 1.5s ease-in-out';
+          }, 300);
+        }
+      }
+    });
+  }, { threshold: 0.5 });
+  
+  skillCards.forEach(card => observer.observe(card));
+  
+  // Parallax effect for hero image
+  const heroVisual = document.querySelector('.hero-visual');
+  if (heroVisual) {
+    window.addEventListener('mousemove', (e) => {
+      const xAxis = (window.innerWidth / 2 - e.pageX) / 25;
+      const yAxis = (window.innerHeight / 2 - e.pageY) / 25;
+      heroVisual.style.transform = `translateY(${yAxis}px) translateX(${xAxis}px)`;
+    });
+  }
+  
+  // Add ripple effect to buttons
+  document.querySelectorAll('.btn, .project-link').forEach(button => {
+    button.addEventListener('click', function(e) {
+      const ripple = document.createElement('span');
+      const rect = this.getBoundingClientRect();
+      const size = Math.max(rect.width, rect.height);
+      const x = e.clientX - rect.left - size / 2;
+      const y = e.clientY - rect.top - size / 2;
+      
+      ripple.style.width = ripple.style.height = size + 'px';
+      ripple.style.left = x + 'px';
+      ripple.style.top = y + 'px';
+      ripple.classList.add('ripple');
+      
+      this.appendChild(ripple);
+      
+      setTimeout(() => {
+        ripple.remove();
+      }, 600);
+    });
+  });
+});
+
+// Add CSS for ripple effect
+const style = document.createElement('style');
+style.textContent = `
+  .ripple {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.7);
+    transform: scale(0);
+    animation: ripple-animation 0.6s linear;
+    pointer-events: none;
+  }
+  
+  @keyframes ripple-animation {
+    to {
+      transform: scale(4);
+      opacity: 0;
+    }
+  }
+`;
+document.head.appendChild(style);
+</script>
+</body>
+</html>
