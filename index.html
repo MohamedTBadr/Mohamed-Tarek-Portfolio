@@ -8,8 +8,11 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
 <link rel="stylesheet" href="index.css">
+<style>
+
+</style>
+
 </head>
 
 <body>
@@ -17,6 +20,14 @@
 <!-- Loading Screen -->
 <div class="loader" id="loader">
   <div class="loader-circle"></div>
+</div>
+
+<!-- Custom Cursor -->
+<div class="custom-cursor"></div>
+
+<!-- Scroll Progress -->
+<div class="scroll-progress">
+  <div class="progress-bar"></div>
 </div>
 
 <!-- Particles Background -->
@@ -47,21 +58,31 @@
 <section id="hero">
   <div class="hero-container">
     <div class="hero-content" data-aos="fade-right" data-aos-duration="1000">
-      <h1 class="glitch-text">Mohamed Tarek</h1>
-      <p class="hero-subtitle">Building the future of web applications with cutting-edge technology and elegant solutions.</p>
+      <!-- Name with typewriter effect -->
+      <h1 class="glitch-text" id="hero-name">Mohamed Tarek</h1>
+      
+      <!-- Subtitle with typewriter effect -->
+      <p class="hero-subtitle" id="hero-subtitle">
+        Building the future of web applications with cutting-edge technology and elegant solutions.
+      </p>
       
       <div class="hero-badges">
+        <!-- Badge 1 -->
         <div class="badge">
           <i class="fas fa-code"></i>
-          Full-Stack Developer
+          <span class="badge-text badge1">Full-Stack Developer</span>
         </div>
+        
+        <!-- Badge 2 -->
         <div class="badge">
           <i class="fas fa-server"></i>
-          Back-End Specialist
+          <span class="badge-text badge2">Back-End Specialist</span>
         </div>
+        
+        <!-- Badge 3 -->
         <div class="badge">
           <i class="fas fa-rocket"></i>
-          Tech Innovator
+          <span class="badge-text badge3">Tech Innovator</span>
         </div>
       </div>
       
@@ -80,7 +101,7 @@
     <div class="hero-visual" data-aos="fade-left" data-aos-duration="1000">
       <div class="profile-container">
         <div class="profile-image">
-          <img src="./Mohamed-Tarek.jpg"  alt="Mohamed Tarek">
+          <img src="./Mohamed-Tarek.jpg" alt="Mohamed Tarek">
         </div>
         <div class="floating-shapes">
           <div class="shape"></div>
@@ -91,7 +112,6 @@
     </div>
   </div>
 </section>
-
 <!-- Skills Section -->
 <section id="skills">
   <div class="skills-container">
@@ -112,12 +132,6 @@
           </div>
           <h3>PHP</h3>
           <p>Advanced OOP, design patterns, and high-performance applications</p>
-          <div class="skill-level">
-            <div class="level-bar">
-              <div class="level-fill" style="width: 100%"></div>
-            </div>
-            <span class="level-percent"></span>
-          </div>
         </div>
         
         <div class="skill-card" data-aos="zoom-in" data-aos-delay="100">
@@ -126,12 +140,7 @@
           </div>
           <h3>JavaScript</h3>
           <p>ES6+ and modern frontend frameworks</p>
-          <div class="skill-level">
-            <div class="level-bar">
-              <div class="level-fill" style="width: 100%"></div>
-            </div>
-            <span class="level-percent"></span>
-          </div>
+         
         </div>
         
         <div class="skill-card" data-aos="zoom-in" data-aos-delay="200">
@@ -140,12 +149,7 @@
           </div>
           <h3>C#</h3>
           <p>Advanced OOP, design patterns, and high-performance applications</p>
-          <div class="skill-level">
-            <div class="level-bar">
-              <div class="level-fill" style="width: 100%"></div>
-            </div>
-            <span class="level-percent"></span>
-          </div>
+          
         </div>
         
         <div class="skill-card" data-aos="zoom-in" data-aos-delay="300">
@@ -154,12 +158,6 @@
           </div>
           <h3>TypeScript</h3>
           <p>Type-safe development with modern ES6+ features</p>
-          <div class="skill-level">
-            <div class="level-bar">
-              <div class="level-fill" style="width: 100%"></div>
-            </div>
-            <span class="level-percent"></span>
-          </div>
         </div>
       </div>
     </div>
@@ -176,12 +174,6 @@
           </div>
           <h3>Laravel</h3>
           <p>Expert in Laravel framework and its ecosystem</p>
-          <div class="skill-level">
-            <div class="level-bar">
-              <div class="level-fill" style="width: 100%"></div>
-            </div>
-            <span class="level-percent"></span>
-          </div>
         </div>
         
         <!-- ASP.NET Core -->
@@ -191,12 +183,6 @@
           </div>
           <h3>ASP.NET Core</h3>
           <p>Expert in ASP.NET Core and its ecosystem</p>
-          <div class="skill-level">
-            <div class="level-bar">
-              <div class="level-fill" style="width: 100%"></div>
-            </div>
-            <span class="level-percent"></span>
-          </div>
         </div>
 
         <div class="skill-card" data-aos="zoom-in" data-aos-delay="100">
@@ -205,12 +191,6 @@
           </div>
           <h3>Angular</h3>
           <p>Component-based architecture and RxJS</p>
-          <div class="skill-level">
-            <div class="level-bar">
-              <div class="level-fill" style="width: 100%"></div>
-            </div>
-            <span class="level-percent"></span>
-          </div>
         </div>
       </div>
     </div>
@@ -227,12 +207,6 @@
           </div>
           <h3>MySQL</h3>
           <p>Database design, optimization, and administration</p>
-          <div class="skill-level">
-            <div class="level-bar">
-              <div class="level-fill" style="width: 100%"></div>
-            </div>
-            <span class="level-percent"></span>
-          </div>
         </div>
         
         <div class="skill-card" data-aos="zoom-in" data-aos-delay="100">
@@ -241,12 +215,6 @@
           </div>
           <h3>SQL Server</h3>
           <p>T-SQL, stored procedures, and performance tuning</p>
-          <div class="skill-level">
-            <div class="level-bar">
-              <div class="level-fill" style="width: 100%"></div>
-            </div>
-            <span class="level-percent"></span>
-          </div>
         </div>
         
         <div class="skill-card" data-aos="zoom-in" data-aos-delay="200">
@@ -255,12 +223,6 @@
           </div>
           <h3>REST APIs</h3>
           <p>Designing secure and scalable RESTful APIs</p>
-          <div class="skill-level">
-            <div class="level-bar">
-              <div class="level-fill" style="width: 100%"></div>
-            </div>
-            <span class="level-percent"></span>
-          </div>
         </div>
         
         <div class="skill-card" data-aos="zoom-in" data-aos-delay="300">
@@ -269,19 +231,13 @@
           </div>
           <h3>Git & GitHub</h3>
           <p>Version control and collaborative development</p>
-          <div class="skill-level">
-            <div class="level-bar">
-              <div class="level-fill" style="width: 100%"></div>
-            </div>
-            <span class="level-percent"></span>
-          </div>
         </div>
-      
-        
+      </div>
     </div>
   </div>
 </section>
-<!-- Add this section after the Skills section -->
+
+<!-- API Integrations Section -->
 <section id="integrations">
   <div class="container">
     <div class="section-header" data-aos="fade-up">
@@ -344,39 +300,55 @@
     </div>
     
     <div class="timeline">
-      <div class="timeline-item" data-aos="fade-right">
-        <div class="timeline-marker">
-          <i class="fas fa-chalkboard-teacher"></i>
-        </div>
-        <div class="timeline-content">
-          <span class="timeline-date">2024</span>
-          <h3><i class="fas fa-chalkboard-teacher"></i> Back-End Development Instructor</h3>
-          <p>Leading the backend architecture, building secure APIs, managing engineering teams, and optimizing system performance. Reduced API response time by 40% through optimization strategies.</p>
-        </div>
-      </div>
-      
-      <div class="timeline-item" data-aos="fade-left">
-        <div class="timeline-marker">
-          <i class="fas fa-laptop-code"></i>
-        </div>
-        <div class="timeline-content">
-          <span class="timeline-date">2025</span>
-          <h3><i class="fas fa-laptop-code"></i> Full-Stack Developer</h3>
-          <p>Delivered comprehensive systems for startups including booking apps, ERPs, delivery systems, and admin dashboards. Successfully collaborated with 20+ clients across diverse industries.</p>
-        </div>
-      </div>
-      
-      <div class="timeline-item" data-aos="fade-right">
-        <div class="timeline-marker">
-          <i class="fas fa-crown"></i>
-        </div>
-        <div class="timeline-content">
-          <span class="timeline-date">2026</span>
-          <h3><i class="fas fa-crown"></i> Web Development Head</h3>
-          <p>Supervised full-stack development teams, building sophisticated dashboards, portals, and scalable web platforms. Successfully delivered 15+ major projects with teams of 5-10 developers.</p>
-        </div>
-      </div>
+
+  <!-- 2024 -->
+  <div class="timeline-item" data-aos="fade-right">
+    <div class="timeline-marker">
+      <i class="fas fa-chalkboard-teacher"></i>
     </div>
+    <div class="timeline-content">
+      <span class="timeline-date">2024</span>
+      <h3><i class="fas fa-chalkboard-teacher"></i> Back-End Development Instructor (ThreeDos)</h3>
+      <p>
+        Taught core web development fundamentals including HTML, CSS, JavaScript, PHP, MySQL, ERDs, and Use Cases. 
+        Guided student teams during conferences and helped them build complete projects from scratch while improving their engineering workflow.
+      </p>
+    </div>
+  </div>
+
+  <!-- 2025 -->
+  <div class="timeline-item" data-aos="fade-left">
+    <div class="timeline-marker">
+      <i class="fas fa-laptop-code"></i>
+    </div>
+    <div class="timeline-content">
+      <span class="timeline-date">2025</span>
+      <h3><i class="fas fa-laptop-code"></i> Full-Stack Developer</h3>
+      <p>
+        Delivered complete systems for startups, including booking platforms, ERP solutions, food-delivery applications, and admin dashboards. 
+        Successfully collaborated with over 20 clients across various industries, handling backend APIs, systems architecture, and front-end development.
+      </p>
+    </div>
+  </div>
+
+  <!-- 2026 -->
+  <div class="timeline-item" data-aos="fade-right">
+    <div class="timeline-marker">
+      <i class="fas fa-crown"></i>
+    </div>
+    <div class="timeline-content">
+      <span class="timeline-date">2026</span>
+      <h3><i class="fas fa-crown"></i> Back-End Development Head (ThreeDos)</h3>
+      <p>
+        Revamped all backend operations and rebuilt the curriculum from the ground up. 
+        Introduced professional topics such as advanced PHP, Laravel architecture, caching strategies, and system optimization. 
+        Led full-stack teams and delivered 5+ major projects while increasing productivity and code quality.
+      </p>
+    </div>
+  </div>
+
+</div>
+
   </div>
 </section>
 
@@ -399,17 +371,14 @@
           <p>A comprehensive platform for booking tours and managing reservations with real-time availability, integrated payment processing, and an advanced admin dashboard.</p>
           <div class="project-tech">
             <span class="tech-tag"><i class="fab fa-php"></i> PHP</span>
-            
             <span class="tech-tag"><i class="fas fa-database"></i> MySQL</span>
             <span class="tech-tag"><i class="fab fa-stripe"></i> Stripe API</span>
           </div>
-           <br>
           <div class="project-links">
-            <a href="https://eninbookings.nl/" class="project-link">
+            <a href="https://eninbookings.nl/" class="project-link" target="_blank">
               <i class="fas fa-external-link-alt"></i>
               Live Site
             </a>
-       
           </div>
         </div>
       </div>
@@ -426,13 +395,10 @@
             <span class="tech-tag"><i class="fab fa-js-square"></i> JavaScript</span>
             <span class="tech-tag"><i class="fab fa-laravel"></i> Laravel</span>
             <span class="tech-tag"><i class="fas fa-server"></i> MySQL</span>
-            <span class="tech-tag"><i class="fas fa-robot"></i> Gemini API </span>
- 
+            <span class="tech-tag"><i class="fas fa-robot"></i> Gemini API</span>
           </div>
-           <br>
           <div class="project-links">
-            
-            <a href="https://github.com/MohamedTBadr/job-board" class="project-link">
+            <a href="https://github.com/MohamedTBadr/job-board" class="project-link" target="_blank">
               <i class="fab fa-github"></i>
               Code
             </a>
@@ -452,15 +418,11 @@
             <span class="tech-tag"><i class="fab fa-angular"></i> Angular</span>
             <span class="tech-tag"><i class="fab fa-microsoft"></i> ASP.NET Core</span>
             <span class="tech-tag"><i class="fas fa-server"></i> SQL Server</span>
-                  <span class="tech-tag"><i class="fab fa-stripe"></i> Stripe API</span>
-
-             <span class="tech-tag"><i class="fas fa-bolt"></i> Redis</span>
-            
+            <span class="tech-tag"><i class="fab fa-stripe"></i> Stripe API</span>
+            <span class="tech-tag"><i class="fas fa-bolt"></i> Redis</span>
           </div>
-         
           <div class="project-links">
-          
-            <a href="https://github.com/MohamedTBadr/Food-Delievery-APIs" class="project-link">
+            <a href="https://github.com/MohamedTBadr/Food-Delievery-APIs" class="project-link" target="_blank">
               <i class="fab fa-github"></i>
               Code
             </a>
@@ -483,8 +445,7 @@
             <span class="tech-tag"><i class="fas fa-code-branch"></i> REST API</span>
           </div>
           <div class="project-links">
-           
-            <a href="https://github.com/MohamedTBadr/Dropshipping-WebApp" class="project-link">
+            <a href="https://github.com/MohamedTBadr/Dropshipping-WebApp" class="project-link" target="_blank">
               <i class="fab fa-github"></i>
               Code
             </a>
@@ -503,30 +464,26 @@
         <h3><i class="fas fa-envelope"></i> Get In Touch</h3>
         <p>Have a project in mind? Let's discuss how we can work together to bring your ideas to life.</p>
         <div class="contact-links">
-        <a href="https://mail.google.com/mail/?view=cm&to=mohamedtarekbadr047@gmail.com" target="_blank" class="contact-link">
-    <i class="fas fa-envelope"></i>
-    <span>mohamedtarekbadr047@gmail.com</span>
-</a>
-
-         <a href="tel:+201122968127" class="contact-link">
-    <i class="fas fa-phone"></i>
-    <span>+201122968127</span>
-</a>
-
+          <a href="https://mail.google.com/mail/?view=cm&to=mohamedtarekbadr047@gmail.com" target="_blank" class="contact-link">
+            <i class="fas fa-envelope"></i>
+            <span>mohamedtarekbadr047@gmail.com</span>
+          </a>
+          <a href="tel:+201122968127" class="contact-link">
+            <i class="fas fa-phone"></i>
+            <span>+201122968127</span>
+          </a>
           <a href="#" class="contact-link">
             <i class="fas fa-map-marker-alt"></i>
             <span>Cairo, Egypt</span>
           </a>
         </div>
         <div class="social-links">
-          <a href="https://www.linkedin.com/in/mohamed-tarek-271153262/" class="social-link">
+          <a href="https://www.linkedin.com/in/mohamed-tarek-271153262/" class="social-link" target="_blank">
             <i class="fab fa-linkedin-in"></i>
           </a>
-          <a href="https://github.com/MohamedTBadr" class="social-link">
+          <a href="https://github.com/MohamedTBadr" class="social-link" target="_blank">
             <i class="fab fa-github"></i>
           </a>
-        
-         
         </div>
       </div>
       
@@ -580,6 +537,15 @@
           Send Message
         </button>
       </form>
+      
+      <div class="contact-visual">
+        <div class="floating-icons">
+          <i class="fab fa-github"></i>
+          <i class="fab fa-linkedin"></i>
+          <i class="fas fa-code"></i>
+          <i class="fas fa-server"></i>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -627,7 +593,7 @@ AOS.init({
   offset: 100
 });
 
-// Particles.js Configuration
+// Enhanced particles.js Configuration
 particlesJS("particles-js", {
   particles: {
     number: { 
@@ -683,12 +649,40 @@ particlesJS("particles-js", {
   retina_detect: true
 });
 
-// DOM Ready
+// Enhanced DOM Ready
 document.addEventListener('DOMContentLoaded', function() {
+  // Custom cursor effect
+  const cursor = document.querySelector('.custom-cursor');
+  document.addEventListener('mousemove', (e) => {
+    cursor.style.left = e.clientX + 'px';
+    cursor.style.top = e.clientY + 'px';
+  });
+
+  // Add hover effect to interactive elements
+  const interactiveElements = document.querySelectorAll('a, button, .skill-card, .project-card, .integration-card');
+  interactiveElements.forEach(el => {
+    el.addEventListener('mouseenter', () => {
+      cursor.classList.add('hovered');
+    });
+    
+    el.addEventListener('mouseleave', () => {
+      cursor.classList.remove('hovered');
+    });
+  });
+
   // Hide loader
   setTimeout(() => {
     document.getElementById('loader').classList.add('hidden');
-  }, 1000);
+  }, 1500);
+  
+  // Scroll progress bar
+  const progressBar = document.querySelector('.progress-bar');
+  window.addEventListener('scroll', () => {
+    const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrolled = (winScroll / height) * 100;
+    progressBar.style.width = scrolled + '%';
+  });
   
   // Navbar scroll effect
   const navbar = document.getElementById('navbar');
@@ -743,7 +737,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
   
-  // Form submission
+  // Enhanced form submission
   const contactForm = document.getElementById('contactForm');
   contactForm.addEventListener('submit', function(e) {
     e.preventDefault();
@@ -755,27 +749,94 @@ document.addEventListener('DOMContentLoaded', function() {
     submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
     submitBtn.disabled = true;
     
-    // Simulate API call
+    // Get form data
+    const formData = {
+      name: document.getElementById('name').value,
+      email: document.getElementById('email').value,
+      subject: document.getElementById('subject').value,
+      message: document.getElementById('message').value,
+      timestamp: new Date().toISOString()
+    };
+    
+    // Simulate API call with better UX
     setTimeout(() => {
-      alert('Thank you! Your message has been sent. I\'ll get back to you soon.');
+      // Show success message with animation
+      const successMessage = document.createElement('div');
+      successMessage.innerHTML = `
+        <div style="
+          position: fixed;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          background: rgba(15, 23, 42, 0.95);
+          backdrop-filter: blur(20px);
+          border: 1px solid var(--glass-border);
+          border-radius: 20px;
+          padding: 3rem;
+          text-align: center;
+          z-index: 9999;
+          animation: fadeIn 0.5s ease;
+        ">
+          <i class="fas fa-check-circle" style="font-size: 4rem; color: #4ade80; margin-bottom: 1rem;"></i>
+          <h3 style="color: white; margin-bottom: 1rem;">Message Sent!</h3>
+          <p style="color: #cbd5e1; margin-bottom: 2rem;">Thank you! I'll get back to you within 24 hours.</p>
+          <button onclick="this.parentElement.remove()" style="
+            background: var(--gradient);
+            color: white;
+            border: none;
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            cursor: pointer;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+          ">
+            Close
+          </button>
+        </div>
+      `;
+      document.body.appendChild(successMessage);
+      
+      // Reset form
       contactForm.reset();
       submitBtn.innerHTML = originalText;
       submitBtn.disabled = false;
+      
+      // Remove success message after 5 seconds
+      setTimeout(() => {
+        if (successMessage.parentElement) {
+          successMessage.remove();
+        }
+      }, 5000);
     }, 2000);
   });
   
-  // Skill level animation on scroll
+  // Enhanced skill level animation on scroll
   const skillCards = document.querySelectorAll('.skill-card');
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         const levelFill = entry.target.querySelector('.level-fill');
+        const percent = entry.target.querySelector('.level-percent');
         if (levelFill) {
           const width = levelFill.style.width;
+          const targetWidth = parseInt(width);
+          let currentWidth = 0;
+          
           levelFill.style.width = '0%';
+          
+          const animate = () => {
+            if (currentWidth < targetWidth) {
+              currentWidth++;
+              levelFill.style.width = currentWidth + '%';
+              if (percent) {
+                percent.textContent = currentWidth + '%';
+              }
+              requestAnimationFrame(animate);
+            }
+          };
+          
           setTimeout(() => {
-            levelFill.style.width = width;
-            levelFill.style.transition = 'width 1.5s ease-in-out';
+            requestAnimationFrame(animate);
           }, 300);
         }
       }
@@ -784,7 +845,7 @@ document.addEventListener('DOMContentLoaded', function() {
   
   skillCards.forEach(card => observer.observe(card));
   
-  // Parallax effect for hero image
+  // Enhanced parallax effect for hero image
   const heroVisual = document.querySelector('.hero-visual');
   if (heroVisual) {
     window.addEventListener('mousemove', (e) => {
@@ -794,8 +855,8 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
   
-  // Add ripple effect to buttons
-  document.querySelectorAll('.btn, .project-link').forEach(button => {
+  // Enhanced ripple effect to buttons
+  document.querySelectorAll('.btn, .project-link, .social-link').forEach(button => {
     button.addEventListener('click', function(e) {
       const ripple = document.createElement('span');
       const rect = this.getBoundingClientRect();
@@ -815,25 +876,142 @@ document.addEventListener('DOMContentLoaded', function() {
       }, 600);
     });
   });
-});
-
-// Add CSS for ripple effect
-const style = document.createElement('style');
-style.textContent = `
-  .ripple {
-    position: absolute;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.7);
-    transform: scale(0);
-    animation: ripple-animation 0.6s linear;
-    pointer-events: none;
+  
+  // Enhanced typewriter effect for hero Name
+  const heroName = document.querySelector('.glitch-text');
+  if (heroName) {
+    const text = heroName.textContent;
+    heroName.textContent = '';
+    
+    let i = 0;
+    const typeWriter = () => {
+      if (i < text.length) {
+        heroName.textContent += text.charAt(i);
+        i++;
+        setTimeout(typeWriter, 30);
+      }
+    };
+    
+    // Start after 1.5 seconds
+    setTimeout(typeWriter, 2000);
+  }
+  // Enhanced typewriter effect for hero subtitle
+  const heroSubtitle = document.querySelector('.hero-subtitle');
+  if (heroSubtitle) {
+    const text = heroSubtitle.textContent;
+    heroSubtitle.textContent = '';
+    
+    let i = 0;
+    const typeWriter = () => {
+      if (i < text.length) {
+        heroSubtitle.textContent += text.charAt(i);
+        i++;
+        setTimeout(typeWriter, 40);
+      }
+    };
+    
+    // Start after 2 seconds
+    setTimeout(typeWriter, 2000);
   }
   
-  @keyframes ripple-animation {
-    to {
-      transform: scale(4);
-      opacity: 0;
-    }
+
+    // Enhanced typewriter effect for hero subtitle
+  const heroBagde1 = document.querySelector('.badge1');
+  if (heroBagde1) {
+    const text = heroBagde1.textContent;
+    heroBagde1.textContent = '';
+    
+    let i = 0;
+    const typeWriter = () => {
+      if (i < text.length) {
+        heroBagde1.textContent += text.charAt(i);
+        i++;
+        setTimeout(typeWriter, 50);
+      }
+    };
+    
+    // Start after 2 seconds
+    setTimeout(typeWriter, 7000);
+  }
+    // Enhanced typewriter effect for hero subtitle
+  const heroBagde2 = document.querySelector('.badge2');
+  if (heroBagde2) {
+    const text = heroBagde2.textContent;
+    heroBagde2.textContent = '';
+    
+    let i = 0;
+    const typeWriter = () => {
+      if (i < text.length) {
+        heroBagde2.textContent += text.charAt(i);
+        i++;
+        setTimeout(typeWriter, 60);
+      }
+    };
+    
+    // Start after 2 seconds
+    setTimeout(typeWriter, 7000);
+  }
+    // Enhanced typewriter effect for hero subtitle
+  const heroBagde3 = document.querySelector('.badge3');
+  if (heroBagde3) {
+    const text = heroBagde3.textContent;
+    heroBagde3.textContent = '';
+    
+    let i = 0;
+    const typeWriter = () => {
+      if (i < text.length) {
+        heroBagde3.textContent += text.charAt(i);
+        i++;
+        setTimeout(typeWriter, 70);
+      }
+    };
+    
+    // Start after 2 seconds
+    setTimeout(typeWriter, 7000);
+  }
+  // Animate skill icons on hover
+  document.querySelectorAll('.skill-icon').forEach(icon => {
+    icon.addEventListener('mouseenter', () => {
+      icon.style.transform = 'scale(1.2) rotate(10deg)';
+      icon.style.transition = 'transform 0.3s ease';
+    });
+    
+    icon.addEventListener('mouseleave', () => {
+      icon.style.transform = 'scale(1) rotate(0deg)';
+    });
+  });
+  
+  // Add scroll reveal animations for all sections
+  const sectionObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+      }
+    });
+  }, { threshold: 0.1 });
+  
+  // Apply to all sections
+  document.querySelectorAll('section').forEach(section => {
+    section.style.opacity = '0';
+    section.style.transform = 'translateY(30px)';
+    section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    sectionObserver.observe(section);
+  });
+  
+  // Floating shapes animation enhancement
+  const shapes = document.querySelectorAll('.shape');
+  shapes.forEach((shape, index) => {
+    shape.style.animationDuration = (15 + index * 5) + 's';
+  });
+});
+
+// Add CSS for animations
+const style = document.createElement('style');
+style.textContent = `
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translate(-50%, -60%); }
+    to { opacity: 1; transform: translate(-50%, -50%); }
   }
 `;
 document.head.appendChild(style);
