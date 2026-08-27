@@ -19,12 +19,11 @@
     }
 
     :root {
-      /* Professional, clean palette — LIGHT (default) */
-      --primary: #0a66c2;      /* trust blue */
+      --primary: #0a66c2;
       --primary-light: #1a7ad4;
-      --secondary: #2d3e50;    /* slate */
-      --accent: #f5a623;       /* warm gold for highlights */
-      --bg-dark: #f4f6f9;      /* page background */
+      --secondary: #2d3e50;
+      --accent: #f5a623;
+      --bg-dark: #f4f6f9;
       --bg-card: #ffffff;
       --hero-bg: linear-gradient(160deg, #f8fafc 0%, #eef2f7 100%);
       --img-bg: #e2e8f0;
@@ -37,12 +36,11 @@
       --transition: 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     }
 
-    /* ---------- DARK MODE — warm amber/coral, no blue ---------- */
     :root[data-theme="dark"] {
-      --primary: #f0a63c;        /* warm amber, replaces blue as the brand color */
+      --primary: #f0a63c;
       --primary-light: #ffbf63;
       --secondary: #e8eaf0;
-      --accent: #ff7a5c;         /* coral, secondary highlight */
+      --accent: #ff7a5c;
       --bg-dark: #0c0d10;
       --bg-card: #16181d;
       --hero-bg: linear-gradient(160deg, #0f1013 0%, #17181d 100%);
@@ -72,7 +70,6 @@
       color: inherit;
     }
 
-    /* ---------- SCROLLBAR ---------- */
     ::-webkit-scrollbar {
       width: 8px;
     }
@@ -134,14 +131,14 @@
       opacity: 0.4;
     }
 
-    /* ---------- NAVBAR ---------- */
+    /* ---------- NAVBAR – fully responsive ---------- */
     .navbar {
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
       z-index: 1000;
-      padding: 1rem 2rem;
+      padding: 0.8rem 1.2rem;
       background: rgba(255, 255, 255, 0.8);
       backdrop-filter: blur(16px) saturate(180%);
       -webkit-backdrop-filter: blur(16px) saturate(180%);
@@ -153,44 +150,53 @@
     }
     .navbar.scrolled {
       background: rgba(255, 255, 255, 0.96);
-      padding: 0.6rem 2rem;
+      padding: 0.4rem 1.2rem;
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
     }
     :root[data-theme="dark"] .navbar.scrolled {
       background: rgba(12, 13, 16, 0.94);
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
     }
+
     .nav-container {
       max-width: 1280px;
       margin: 0 auto;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      gap: 1rem;
+      gap: 0.5rem;
+      flex-wrap: nowrap;
     }
+
     .logo {
-      font-size: 1.8rem;
+      font-size: 1.6rem;
       font-weight: 800;
       color: var(--primary);
       display: flex;
       align-items: center;
-      gap: 0.5rem;
+      gap: 0.4rem;
+      flex-shrink: 0;
     }
     .logo i {
-      font-size: 2rem;
+      font-size: 1.6rem;
       color: var(--primary);
     }
 
     .nav-right {
       display: flex;
       align-items: center;
-      gap: 1rem;
+      gap: 0.6rem;
+      flex-shrink: 1;
+      min-width: 0;
     }
 
     .nav-links {
       display: flex;
       list-style: none;
-      gap: 2.5rem;
+      gap: 1.8rem;
+      margin: 0;
+      padding: 0;
+      align-items: center;
     }
     .nav-links a {
       font-weight: 500;
@@ -198,6 +204,7 @@
       position: relative;
       color: var(--text-muted);
       transition: var(--transition);
+      white-space: nowrap;
     }
     .nav-links a::after {
       content: '';
@@ -219,18 +226,19 @@
     }
 
     .theme-toggle {
-      width: 42px;
-      height: 42px;
+      width: 40px;
+      height: 40px;
       border-radius: 50%;
       border: 1px solid var(--border-glass);
       background: var(--bg-card);
       color: var(--text-dark);
-      font-size: 1.05rem;
+      font-size: 1rem;
       display: flex;
       align-items: center;
       justify-content: center;
       cursor: pointer;
       transition: var(--transition), background 0.35s ease, color 0.35s ease;
+      flex-shrink: 0;
     }
     .theme-toggle:hover {
       border-color: var(--primary);
@@ -246,11 +254,13 @@
       background: transparent;
       border: 1px solid var(--border-glass);
       border-radius: 12px;
-      padding: 0.5rem 0.9rem;
+      padding: 0.4rem 0.8rem;
       color: var(--text-dark);
-      font-size: 1.4rem;
+      font-size: 1.3rem;
       cursor: pointer;
       transition: var(--transition);
+      flex-shrink: 0;
+      line-height: 1;
     }
     .hamburger:hover {
       background: var(--bg-dark);
@@ -377,7 +387,6 @@
       transform: translateY(-4px);
     }
 
-    /* profile image */
     .profile-wrapper {
       position: relative;
       width: 480px;
@@ -1013,19 +1022,21 @@
     @media (max-width: 768px) {
       .nav-links {
         position: fixed;
-        top: 72px;
+        top: 68px;
         left: 0;
         right: 0;
         background: rgba(255, 255, 255, 0.98);
         backdrop-filter: blur(20px);
         flex-direction: column;
-        padding: 2rem;
+        padding: 2rem 1.5rem;
         gap: 1.5rem;
         transform: translateY(-120%);
         opacity: 0;
         transition: var(--transition);
-        align-items: center;
+        align-items: stretch;
         border-bottom: 1px solid var(--border-glass);
+        box-shadow: 0 16px 30px rgba(0,0,0,0.06);
+        border-radius: 0 0 24px 24px;
       }
       :root[data-theme="dark"] .nav-links {
         background: rgba(12, 13, 16, 0.98);
@@ -1033,6 +1044,16 @@
       .nav-links.active {
         transform: translateY(0);
         opacity: 1;
+      }
+      .nav-links a {
+        font-size: 1.1rem;
+        padding: 0.6rem 0;
+        border-bottom: 1px solid var(--border-glass);
+        width: 100%;
+        text-align: center;
+      }
+      .nav-links a::after {
+        display: none;
       }
       .hamburger {
         display: block;
@@ -1057,6 +1078,23 @@
         font-size: 0.8rem;
         padding: 0.4rem 1.2rem;
       }
+      .navbar {
+        padding: 0.6rem 1rem;
+      }
+      .logo {
+        font-size: 1.3rem;
+      }
+      .logo i {
+        font-size: 1.3rem;
+      }
+      .theme-toggle {
+        width: 36px;
+        height: 36px;
+        font-size: 0.9rem;
+      }
+      .nav-right {
+        gap: 0.4rem;
+      }
     }
 
     @media (max-width: 480px) {
@@ -1074,6 +1112,33 @@
       .hero-actions {
         flex-direction: column;
         width: 100%;
+      }
+      .navbar {
+        padding: 0.5rem 0.8rem;
+      }
+      .logo {
+        font-size: 1.1rem;
+      }
+      .logo i {
+        font-size: 1.1rem;
+      }
+      .hamburger {
+        padding: 0.3rem 0.6rem;
+        font-size: 1.1rem;
+      }
+      .theme-toggle {
+        width: 32px;
+        height: 32px;
+        font-size: 0.8rem;
+      }
+      .nav-links {
+        top: 60px;
+        padding: 1.5rem 1rem;
+        gap: 1rem;
+      }
+      .nav-links a {
+        font-size: 1rem;
+        padding: 0.5rem 0;
       }
     }
   </style>
@@ -1213,10 +1278,7 @@
             <div class="timeline-item" data-aos="fade-left">
           <div class="timeline-marker"><i class="fas fa-laptop-code"></i></div>
           <div class="timeline-content"><span class="timeline-date">2026</span><h3>Backend Developer Intern</h3><p>Developed and maintained backend features using .NET / C#, working with an existing production
-codebase.
-•Refactored legacy components, improved code structure, and contributed to backend development and
-maintenance.
-.</p></div>
+codebase. Refactored legacy components, improved code structure.</p></div>
         </div>
       </div>
     </div>
@@ -1230,7 +1292,6 @@ maintenance.
         <p>Production‑grade solutions with real‑world impact</p>
       </div>
       <div class="projects-grid">
-        <!-- featured -->
         <div class="project-card featured" data-aos="zoom-in">
           <div class="project-image">
             <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="EpicHub">
