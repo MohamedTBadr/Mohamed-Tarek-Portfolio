@@ -19,19 +19,39 @@
     }
 
     :root {
-      /* Professional, clean palette */
+      /* Professional, clean palette — LIGHT (default) */
       --primary: #0a66c2;      /* trust blue */
       --primary-light: #1a7ad4;
       --secondary: #2d3e50;    /* slate */
       --accent: #f5a623;       /* warm gold for highlights */
-      --bg-dark: #f4f6f9;      /* light grey background */
+      --bg-dark: #f4f6f9;      /* page background */
       --bg-card: #ffffff;
+      --hero-bg: linear-gradient(160deg, #f8fafc 0%, #eef2f7 100%);
+      --img-bg: #e2e8f0;
       --border-glass: rgba(0, 0, 0, 0.06);
       --text-dark: #1e293b;
       --text-muted: #475569;
       --shadow: 0 12px 30px -8px rgba(0, 0, 0, 0.08);
+      --badge-overlay: rgba(0, 0, 0, 0.6);
       --radius: 20px;
       --transition: 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    /* ---------- DARK MODE — warm amber/coral, no blue ---------- */
+    :root[data-theme="dark"] {
+      --primary: #f0a63c;        /* warm amber, replaces blue as the brand color */
+      --primary-light: #ffbf63;
+      --secondary: #e8eaf0;
+      --accent: #ff7a5c;         /* coral, secondary highlight */
+      --bg-dark: #0c0d10;
+      --bg-card: #16181d;
+      --hero-bg: linear-gradient(160deg, #0f1013 0%, #17181d 100%);
+      --img-bg: #22252c;
+      --border-glass: rgba(255, 255, 255, 0.08);
+      --text-dark: #eef0f4;
+      --text-muted: #9aa1ac;
+      --shadow: 0 16px 36px -10px rgba(0, 0, 0, 0.55);
+      --badge-overlay: rgba(0, 0, 0, 0.75);
     }
 
     html {
@@ -44,6 +64,7 @@
       color: var(--text-dark);
       line-height: 1.6;
       overflow-x: hidden;
+      transition: background 0.35s ease, color 0.35s ease;
     }
 
     a {
@@ -125,12 +146,19 @@
       backdrop-filter: blur(16px) saturate(180%);
       -webkit-backdrop-filter: blur(16px) saturate(180%);
       border-bottom: 1px solid var(--border-glass);
-      transition: var(--transition);
+      transition: var(--transition), background 0.35s ease;
+    }
+    :root[data-theme="dark"] .navbar {
+      background: rgba(12, 13, 16, 0.75);
     }
     .navbar.scrolled {
       background: rgba(255, 255, 255, 0.96);
       padding: 0.6rem 2rem;
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+    }
+    :root[data-theme="dark"] .navbar.scrolled {
+      background: rgba(12, 13, 16, 0.94);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
     }
     .nav-container {
       max-width: 1280px;
@@ -138,6 +166,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      gap: 1rem;
     }
     .logo {
       font-size: 1.8rem;
@@ -150,6 +179,12 @@
     .logo i {
       font-size: 2rem;
       color: var(--primary);
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
     }
 
     .nav-links {
@@ -182,6 +217,29 @@
     .nav-links a.active::after {
       width: 100%;
     }
+
+    .theme-toggle {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      border: 1px solid var(--border-glass);
+      background: var(--bg-card);
+      color: var(--text-dark);
+      font-size: 1.05rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: var(--transition), background 0.35s ease, color 0.35s ease;
+    }
+    .theme-toggle:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+      transform: translateY(-2px);
+    }
+    .theme-toggle .fa-sun { display: none; }
+    :root[data-theme="dark"] .theme-toggle .fa-moon { display: none; }
+    :root[data-theme="dark"] .theme-toggle .fa-sun { display: inline-block; }
 
     .hamburger {
       display: none;
@@ -223,7 +281,8 @@
       position: relative;
       z-index: 1;
       padding: 6rem 2rem 4rem;
-      background: linear-gradient(160deg, #f8fafc 0%, #eef2f7 100%);
+      background: var(--hero-bg);
+      transition: background 0.35s ease;
     }
     .hero-container {
       max-width: 1280px;
@@ -267,7 +326,7 @@
       gap: 0.6rem;
       font-weight: 500;
       font-size: 0.95rem;
-      transition: var(--transition);
+      transition: var(--transition), background 0.35s ease;
       box-shadow: 0 2px 8px rgba(0,0,0,0.02);
     }
     .badge i {
@@ -345,7 +404,7 @@
       border-radius: 28px;
       overflow: hidden;
       z-index: 1;
-      background: #e2e8f0;
+      background: var(--img-bg);
     }
     .profile-img img {
       width: 100%;
@@ -418,7 +477,7 @@
       border: 1px solid var(--border-glass);
       border-radius: var(--radius);
       padding: 2rem 1.8rem;
-      transition: var(--transition);
+      transition: var(--transition), background 0.35s ease;
       box-shadow: var(--shadow);
     }
     .skill-card:hover {
@@ -441,6 +500,13 @@
     }
 
     /* ---------- INTEGRATIONS ---------- */
+    #integrations {
+      background: rgba(255,255,255,0.3);
+      transition: background 0.35s ease;
+    }
+    :root[data-theme="dark"] #integrations {
+      background: rgba(255,255,255,0.02);
+    }
     .integrations-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -451,7 +517,7 @@
       border: 1px solid var(--border-glass);
       border-radius: var(--radius);
       padding: 2rem;
-      transition: var(--transition);
+      transition: var(--transition), background 0.35s ease;
       box-shadow: var(--shadow);
     }
     .integration-card:hover {
@@ -473,6 +539,7 @@
     .stripe { background: var(--primary); }
     .gemini { background: var(--secondary); }
     .redis { background: #d82c20; }
+    :root[data-theme="dark"] .gemini { background: #3a3d46; }
     .integration-card h3 {
       font-size: 1.6rem;
       margin-bottom: 0.6rem;
@@ -556,7 +623,7 @@
       border: 1px solid var(--border-glass);
       border-radius: var(--radius);
       padding: 1.8rem 2rem;
-      transition: var(--transition);
+      transition: var(--transition), background 0.35s ease;
       width: 100%;
       box-shadow: var(--shadow);
     }
@@ -595,7 +662,7 @@
       border: 1px solid var(--border-glass);
       border-radius: var(--radius);
       overflow: hidden;
-      transition: var(--transition);
+      transition: var(--transition), background 0.35s ease;
       box-shadow: var(--shadow);
     }
     .project-card:hover {
@@ -608,6 +675,9 @@
       border-color: var(--primary);
       background: linear-gradient(135deg, rgba(10, 102, 194, 0.02), rgba(10, 102, 194, 0.05));
       position: relative;
+    }
+    :root[data-theme="dark"] .project-card.featured {
+      background: linear-gradient(135deg, rgba(240, 166, 60, 0.06), rgba(240, 166, 60, 0.03));
     }
     .project-card.featured::before {
       content: '⭐ Featured Project';
@@ -642,7 +712,7 @@
       position: absolute;
       top: 1rem;
       right: 1rem;
-      background: rgba(0, 0, 0, 0.6);
+      background: var(--badge-overlay);
       backdrop-filter: blur(8px);
       padding: 0.3rem 1.2rem;
       border-radius: 40px;
@@ -683,7 +753,7 @@
       display: inline-flex;
       align-items: center;
       gap: 0.4rem;
-      transition: var(--transition);
+      transition: var(--transition), background 0.35s ease;
     }
     .tech-tag:hover {
       background: var(--primary);
@@ -704,7 +774,7 @@
       border-radius: 40px;
       font-weight: 500;
       font-size: 0.9rem;
-      transition: var(--transition);
+      transition: var(--transition), background 0.35s ease;
       color: var(--text-dark);
     }
     .project-link:hover {
@@ -726,7 +796,7 @@
       border-radius: var(--radius);
       padding: 2rem;
       margin-bottom: 1.5rem;
-      transition: var(--transition);
+      transition: var(--transition), background 0.35s ease;
       box-shadow: var(--shadow);
     }
     .contact-card:hover {
@@ -777,7 +847,7 @@
       justify-content: center;
       color: var(--text-dark);
       font-size: 1.2rem;
-      transition: var(--transition);
+      transition: var(--transition), background 0.35s ease;
     }
     .social-link:hover {
       background: var(--primary);
@@ -803,7 +873,7 @@
       padding: 0.9rem 1.2rem;
       color: var(--text-dark);
       font-family: 'Inter', sans-serif;
-      transition: var(--transition);
+      transition: var(--transition), background 0.35s ease;
     }
     .form-control:focus {
       outline: none;
@@ -842,6 +912,7 @@
       border-top: 1px solid var(--border-glass);
       margin-top: 2rem;
       padding: 3rem 2rem 1.5rem;
+      transition: background 0.35s ease;
     }
     .footer-grid {
       max-width: 1280px;
@@ -956,6 +1027,9 @@
         align-items: center;
         border-bottom: 1px solid var(--border-glass);
       }
+      :root[data-theme="dark"] .nav-links {
+        background: rgba(12, 13, 16, 0.98);
+      }
       .nav-links.active {
         transform: translateY(0);
         opacity: 1;
@@ -1019,14 +1093,20 @@
   <nav class="navbar" id="navbar">
     <div class="nav-container">
       <a href="#" class="logo"><i class="fas fa-code"></i> MT</a>
-      <button class="hamburger" id="hamburger"><i class="fas fa-bars"></i></button>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="#hero" class="active">Home</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#timeline">Experience</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+      <div class="nav-right">
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#hero" class="active">Home</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#timeline">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+          <i class="fas fa-moon"></i>
+          <i class="fas fa-sun"></i>
+        </button>
+        <button class="hamburger" id="hamburger"><i class="fas fa-bars"></i></button>
+      </div>
     </div>
   </nav>
 
@@ -1081,7 +1161,7 @@
   </section>
 
   <!-- INTEGRATIONS -->
-  <section id="integrations" style="background: rgba(255,255,255,0.3);">
+  <section id="integrations">
     <div class="container">
       <div class="section-header" data-aos="fade-up">
         <h2>API <span>Integrations</span> &amp; Tools</h2>
@@ -1251,21 +1331,53 @@
   <script>
     AOS.init({ duration: 800, once: true, offset: 60 });
 
-    particlesJS("particles-js", {
-      particles: {
-        number: { value: 90, density: { enable: true, value_area: 900 } },
-        color: { value: ["#0a66c2", "#2d3e50", "#f5a623"] },
-        shape: { type: "circle" },
-        opacity: { value: 0.25, random: true, anim: { enable: true, speed: 0.8, opacity_min: 0.05 } },
-        size: { value: 3, random: true, anim: { enable: true, speed: 2, size_min: 0.5 } },
-        line_linked: { enable: true, distance: 160, color: "#0a66c2", opacity: 0.08, width: 1 },
-        move: { enable: true, speed: 1.2, direction: "none", random: true, straight: false, out_mode: "out" }
-      },
-      interactivity: { detect_on: "canvas", events: { onhover: { enable: true, mode: "grab" }, onclick: { enable: true, mode: "push" }, resize: true }, modes: { grab: { distance: 200, line_linked: { opacity: 0.2 } }, push: { particles_nb: 3 } } },
-      retina_detect: true
-    });
+    const LIGHT_PARTICLES = ["#0a66c2", "#2d3e50", "#f5a623"];
+    const DARK_PARTICLES  = ["#f0a63c", "#ff7a5c", "#eef0f4"];
+
+    function initParticles(colors) {
+      if (window.pJSDom && window.pJSDom.length) {
+        window.pJSDom.forEach(p => p.pJS.fn.vendors.destroypJS());
+        window.pJSDom = [];
+      }
+      particlesJS("particles-js", {
+        particles: {
+          number: { value: 90, density: { enable: true, value_area: 900 } },
+          color: { value: colors },
+          shape: { type: "circle" },
+          opacity: { value: 0.25, random: true, anim: { enable: true, speed: 0.8, opacity_min: 0.05 } },
+          size: { value: 3, random: true, anim: { enable: true, speed: 2, size_min: 0.5 } },
+          line_linked: { enable: true, distance: 160, color: colors[0], opacity: 0.08, width: 1 },
+          move: { enable: true, speed: 1.2, direction: "none", random: true, straight: false, out_mode: "out" }
+        },
+        interactivity: { detect_on: "canvas", events: { onhover: { enable: true, mode: "grab" }, onclick: { enable: true, mode: "push" }, resize: true }, modes: { grab: { distance: 200, line_linked: { opacity: 0.2 } }, push: { particles_nb: 3 } } },
+        retina_detect: true
+      });
+    }
 
     document.addEventListener('DOMContentLoaded', function() {
+
+      // ---- Theme setup ----
+      const root = document.documentElement;
+      const storedTheme = localStorage.getItem('mt-theme');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const initialTheme = storedTheme || (prefersDark ? 'dark' : 'light');
+      if (initialTheme === 'dark') root.setAttribute('data-theme', 'dark');
+      initParticles(initialTheme === 'dark' ? DARK_PARTICLES : LIGHT_PARTICLES);
+
+      const themeToggle = document.getElementById('themeToggle');
+      themeToggle.addEventListener('click', () => {
+        const isDark = root.getAttribute('data-theme') === 'dark';
+        if (isDark) {
+          root.removeAttribute('data-theme');
+          localStorage.setItem('mt-theme', 'light');
+          initParticles(LIGHT_PARTICLES);
+        } else {
+          root.setAttribute('data-theme', 'dark');
+          localStorage.setItem('mt-theme', 'dark');
+          initParticles(DARK_PARTICLES);
+        }
+      });
+
       // Loader
       setTimeout(() => document.getElementById('loader').classList.add('hidden'), 1200);
 
